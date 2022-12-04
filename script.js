@@ -18,3 +18,10 @@ for (let i = 0; i < btnsOpenModel.length; i++)
 
 btnCloseModel.addEventListener('click', close);
 overlay.addEventListener('click', close);
+// respond to a keyboard events
+document.addEventListener('keydown', e => {
+  //console.log(e.key);
+  if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+    close();
+  }
+});
